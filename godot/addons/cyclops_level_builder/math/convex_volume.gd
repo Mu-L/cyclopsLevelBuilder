@@ -1689,12 +1689,15 @@ func create_mesh(material_list:Array[Material], default_material:Material, overr
 				tangent = tan_bi[0]
 				
 			#b = b.normalized()
+			if tangent.cross(b).dot(n) > 0:
+				tangent = -tangent
 			
 			for j in 3:
 				tangents.append(tangent.x)
 				tangents.append(tangent.y)
 				tangents.append(tangent.z)
-				tangents.append(-1.0 if tangent.cross(b).dot(n) > 0 else 1.0)
+#				tangents.append(-1.0 if tangent.cross(b).dot(n) > 0 else 1.0)
+				tangents.append(1.0)
 #		print("create_mesh <<1.2>>")
 		
 		var arrays:Array = create_indexed_vertex_array(points, normals, tangents, colors, uv1s)

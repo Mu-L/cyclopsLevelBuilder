@@ -16,6 +16,7 @@ Cyclops Level Builder 1.5.0 works with Godot version 4.7 and later.  Cyclops Lev
     ![Enable addon](doc/enable_addon.jpg)
     * Select the `Globals` tab and make sure that there is an entry called `CyclopsAutoload` and it has the path `res://addons/cyclops_level_builder/cyclops_autoload.tscn`, and that it is enabled.  This should be done automatically with version 1.5.0, but needs to be added manually in earlier versions.  It could also be disabled if you are upgrading from an earlier version of Cyclops Level Builder.
 
+This repository uses LFS to manage large files, so if you're cloning the git repository, make sure to use a `git` client that supports LFS.  Many clients ship with LFS support included, but some systems like Mint Linux may need to have it specially enabled.
 
 ## Upgrading
 
