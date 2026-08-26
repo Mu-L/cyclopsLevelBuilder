@@ -32,9 +32,17 @@ If you're upgrading your project from Cyclops v1.0.0, v1.0.1 or an earlier devel
 [Documentation for using Cyclops Level Builder is available here.](https://blackears.github.io/cyclopsLevelBuilder/)
 
 
-## Contributing 
+## Contributing
 
-Please open small issues.  PRs are welcome for small fixes.  Broader ideas can be opened for discussion in the [Discussions](https://github.com/blackears/cyclopsLevelBuilder/discussions) forum.
+### Issues, Bug reports and Pull Requests
+Please report bugs using the issue tracker on this website.  PRs are welcome for small fixes.  
+
+Broader ideas can be opened for discussion in the [Discussions](https://github.com/blackears/cyclopsLevelBuilder/discussions) forum.
+
+
+### Discord Server
+
+You can join the [Discord server](https://discordapp.com/channels/1371463874200600597/1373857204439875635) to discuss things related to Cyclops.
 
 
 ## Support
