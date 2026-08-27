@@ -155,7 +155,7 @@ When the CyclopsBlocks object is selected, extra docked windows will appear to g
 
 * [Tool Properties](dock_tool_properties.md)
 * [UV Editor](docks/uv_editor/index.md)
-* [Material](dock_material.md)
+* [Material](docks/materials/index.md)
 
 ## Materials
 

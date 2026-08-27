@@ -19,7 +19,7 @@ nav:
       - docks/uv_editor/index.md
       - Uv Editor Dock Menu: 
         - docks/uv_editor/uv_editor_menu.md
-        - docks\uv_editor\menu\triplanar_unwrap.md
+        - docks/uv_editor/menu/triplanar_unwrap.md
     - Tool Properties:
       - dock_tool_properties.md
     - Snapping:
@@ -45,7 +45,7 @@ nav:
       - Edge: tools/tool_edge.md
       - Face: tools/tool_face.md
       - Material Brush: tools/tool_material_brush.md
-      - Vertex Color Brush: tools\tool_vertex_color_brush.md
+      - Vertex Color Brush: tools/tool_vertex_color_brush.md
 
     - Other:
       - Duplicate: tools/tool_duplicate.md
