@@ -1,6 +1,6 @@
 # Documentation
 
-![Cyclops Level Builder Title](cyclops_title.png)
+![Cyclops Level Builder Title](./cyclops_title.png)
 
 Cyclops Level Builder is an addon for Godot that lets you design levels inside the editor.
 
