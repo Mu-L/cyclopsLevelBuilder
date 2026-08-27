@@ -15,7 +15,7 @@ Report any bugs with the [issues tracker](https://github.com/blackears/cyclopsLe
 
 ### Discord Server
 
-You can join the [Discord server](https://discordapp.com/channels/1371463874200600597/1373857204439875635) to discuss things related to Cyclops.
+You can join the [Discord server](https://discord.gg/BkhwU8Dx5c) to discuss things related to Cyclops.
 
 
 ### Tutorial videos

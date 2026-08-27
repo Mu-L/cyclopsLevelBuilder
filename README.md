@@ -42,7 +42,7 @@ Broader ideas can be opened for discussion in the [Discussions](https://github.c
 
 ### Discord Server
 
-You can join the [Discord server](https://discordapp.com/channels/1371463874200600597/1373857204439875635) to discuss things related to Cyclops.
+You can join the [Discord server](https://discord.gg/BkhwU8Dx5c) to discuss things related to Cyclops.
 
 
 ## Support
