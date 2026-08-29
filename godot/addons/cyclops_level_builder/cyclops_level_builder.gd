@@ -32,11 +32,24 @@ signal tool_changed(tool:CyclopsTool)
 signal keymap_updated
 signal keymap_changed
 signal config_changed
+signal show_3d_toolbar_changed(value:bool)
 
 const AUTOLOAD_NAME = "CyclopsAutoload"
 const CYCLOPS_HUD_NAME = "CyclopsGlobalHud"
 
 var logger:CyclopsLogger = CyclopsLogger.new()
+
+@export var show_3d_toolbar:bool = true:
+	set(v):
+		if show_3d_toolbar == v:
+			return
+			
+		show_3d_toolbar = v
+		show_3d_toolbar_changed.emit(show_3d_toolbar)
+		
+		if editor_toolbar:
+			editor_toolbar.visible = show_3d_toolbar
+		
 
 #For now, use a single keymap for all operations
 const default_keymap_path:String = "res://addons/cyclops_level_builder/data/default_keymap.tres"

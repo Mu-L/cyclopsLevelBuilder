@@ -25,13 +25,31 @@
 extends Control
 class_name CyclopsConsole
 
+@onready var check_show_3d_toolbar:CheckBox = %check_show_3d_toolbar
+
 var editor_plugin:CyclopsLevelBuilder:
 	set(value):
+		if editor_plugin:
+			editor_plugin.show_3d_toolbar_changed.disconnect(on_show_3d_toolbar_changed)
+		
 		editor_plugin = value
 		%Keymap.plugin = editor_plugin
+		
+		
+		if editor_plugin:
+			editor_plugin.show_3d_toolbar_changed.connect(on_show_3d_toolbar_changed)
+		
+		if is_node_ready():
+			check_show_3d_toolbar.set_pressed_no_signal(editor_plugin.show_3d_toolbar)
+
+func on_show_3d_toolbar_changed(value:bool):
+	check_show_3d_toolbar.set_pressed_no_signal(value)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if editor_plugin:
+		check_show_3d_toolbar.set_pressed_no_signal(editor_plugin.show_3d_toolbar)
+	
 	pass # Replace with function body.
 
 
@@ -68,3 +86,7 @@ func _on_bn_create_block_pressed():
 	var undo:EditorUndoRedoManager = editor_plugin.get_undo_redo()
 	cmd.add_to_undo_manager(undo)
 
+
+
+func _on_check_show_3d_toolbar_toggled(toggled_on: bool) -> void:
+	editor_plugin.show_3d_toolbar = toggled_on
