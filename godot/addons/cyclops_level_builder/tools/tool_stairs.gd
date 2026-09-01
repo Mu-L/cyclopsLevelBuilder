@@ -112,7 +112,7 @@ func _draw_tool(viewport_camera:Camera3D):
 		builder.viewport_3d_manager.draw_vertices(base_points, global_scene.vertex_tool_material)
 		
 	if tool_state == ToolState.DRAG_HEIGHT:
-		var tan_bi:Array[Vector3] = MathUtil.get_axis_aligned_tangent_and_binormal(floor_normal)
+		var tan_bi:PackedVector3Array = MathUtil.get_axis_aligned_tangent_and_binormal(floor_normal)
 		var u_normal:Vector3 = tan_bi[0]
 		var v_normal:Vector3 = tan_bi[1]
 

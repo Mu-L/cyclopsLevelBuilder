@@ -74,7 +74,7 @@ func do_it():
 			material_id = 0
 			material = mat
 	
-	var tan_bi:Array[Vector3] = MathUtil.get_axis_aligned_tangent_and_binormal(floor_normal)
+	var tan_bi:PackedVector3Array = MathUtil.get_axis_aligned_tangent_and_binormal(floor_normal)
 	var u_normal:Vector3 = tan_bi[0]
 	var v_normal:Vector3 = tan_bi[1]
 
