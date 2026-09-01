@@ -57,14 +57,21 @@ class_name ToolMaterialBrushSettings
 			visibility = value
 			emit_changed()
 
+func load_node_path(cache:Dictionary, name:String)->NodePath:
+	var path = cache.get(name)
+	if path is String:
+		return NodePath(path)
+	else:
+		return NodePath()
+		
 func load_from_cache(cache:Dictionary):
 	paint_materials = cache.get("paint_materials", true)
 	paint_color = cache.get("paint_color", false)
 	paint_visibility = cache.get("paint_visibility", false)
 	individual_faces = cache.get("individual_faces", false)
-	#component_type = cache.get("component_type", GeometryComponentType.Type.OBJECT)
 	erase_material = cache.get("erase_material", false)
-	material_path = str_to_var(cache.get("material_path", NodePath()))
+	material_path = load_node_path(cache, "material_path")
+	#material_path = str_to_var(cache.get("material_path", NodePath()))
 	color = str_to_var(cache.get("color", var_to_str(Color.WHITE)))
 	visibility = cache.get("visibility", false)
 	paint_uv = cache.get("paint_uv", false)
@@ -76,9 +83,9 @@ func save_to_cache():
 		"paint_color": paint_color,
 		"paint_visibility": paint_visibility,
 		"individual_faces": individual_faces,
-		#"component_type": component_type,
 		"erase_material": erase_material,
-		"material_path": var_to_str(material_path),
+#		"material_path": "" if !material_path || material_path.is_empty() else var_to_str(material_path),
+		"material_path": "" if !material_path else material_path.get_concatenated_names(),
 		"color": var_to_str(color),
 		"visibility": visibility,
 		"paint_uv": paint_uv,
